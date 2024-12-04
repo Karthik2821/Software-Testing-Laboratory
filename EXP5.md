@@ -1,3 +1,8 @@
+# Ex.No: 5 Python program for Binary Search and inspect for failures
+
+# DATE: 13/09/2024
+# REGISTER NUMBER :212221040018
+
 ### AIM: 
 Write a python program to check the number is Armstrong number or not and inspect for failures.
 
@@ -15,22 +20,47 @@ Write a python program to check the number is Armstrong number or not and inspec
 
 ### Program:
 
+```
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0
+
+    while low <= high:
+        mid = (high + low) // 2
+
+     
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid 
+    return -1  
+
+arr = [2, 3, 4, 10, 40]
 
 
+x = input("Enter the element to be searched: ")
+
+try:
+    x = int(x)  
+    result = binary_search(arr, x) 
+
+    if result != -1:
+        print("Element is present at index", str(result))
+    else:
+        print("Element is not present in array")
+
+except ValueError:
+    print("Enter a valid input!")  
 
 
-
-
-
-
-
-
-
+```
 
 ### Output:
 
-
+![Screenshot (154)](https://github.com/user-attachments/assets/ad281c51-8942-4d89-a09e-610a07545d98)
 
 ### Result:
 Thus, the python program to check the number is Armstrong number or not implemented and the output is verified successfully.
-
